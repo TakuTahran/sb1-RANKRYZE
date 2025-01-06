@@ -17,56 +17,61 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="How can we help?"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+          <form className="space-y-6" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
+  <div>
+    <label
+      htmlFor="name"
+      className="block text-gray-700 font-medium mb-2"
+    >
+      Name
+    </label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      placeholder="Your name"
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="email"
+      className="block text-gray-700 font-medium mb-2"
+    >
+      Email
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      placeholder="your@email.com"
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="message"
+      className="block text-gray-700 font-medium mb-2"
+    >
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      rows={4}
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      placeholder="How can we help?"
+    ></textarea>
+  </div>
+  <button
+    type="submit"
+    className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+  >
+    Send Message
+  </button>
+</form>
+
           </div>
 
           <div className="space-y-8">
