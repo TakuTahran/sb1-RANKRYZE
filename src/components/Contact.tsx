@@ -17,8 +17,8 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form className="space-y-6" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact" />
+              <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="contact" value="contact" />
                 <div>
                   <label
                     htmlFor="name"
